@@ -1,9 +1,0 @@
-<h1> The Hot Links </h1>
-
-<% @links.each do |link| %>
-  <% if first_link?(link) %>
-    <p><%= link[:url] %> Top Link! </p>
-  <% else %>
-    <p><%= link[:url] %> Hot Readl! </p>
-  <% end %>
-<% end %>

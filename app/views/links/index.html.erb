@@ -1,0 +1,19 @@
+<h1> The Hot Links </h1>
+
+
+<table class="table table-striped table-hover">
+      <th>URL</th>
+      <th>Times Read</th>
+      <th> Top Link or Hot Read </th>
+      <% @links.each do |link| %>
+        <tr>
+          <td><%= link_to link.url, link.url, target: "_blank" %></td>
+          <td><%= link.read_count %></td>
+          <% if @links.first == link %>
+            <td> Top Link! </td>
+          <% else %>
+            <td> Hot Readl! </td>
+          <% end %>
+        </tr>
+      <% end %>
+</table>
