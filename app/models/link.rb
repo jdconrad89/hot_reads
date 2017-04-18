@@ -1,4 +1,5 @@
 class Link < ApplicationRecord
   validates :url, presence: true
-  validates :url, uniqueness: true
+
+  scope :hot_reads, -> (cap = 10) { order("links.read_count DESC").limit(cap)}
 end
